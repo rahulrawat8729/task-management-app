@@ -76,16 +76,28 @@ cd task-management-app
 ---
 
 ## 🧠 Design Decisions
-
-### **Backend Architecture**
 * **MVC Pattern:** Organized into Models, Controllers, and Routes for high maintainability.
 * **Mongoose Modeling:** Used for strict schema validation.
 * **Centralized Error Handling:** Ensures consistent API responses and easier debugging.
+* **Vite & Tailwind:** Chosen for performance and rapid, clean UI development.
 
-### **Frontend & UX**
-* **Vite:** Chosen for its lightning-fast HMR (Hot Module Replacement).
-* **Tailwind CSS:** Used to achieve a modern, "utility-first" design without bulky CSS files.
-* **Service Layer:** API calls are abstracted into separate service files to keep components clean.
+---
+
+## 📄 Assumptions & Trade-offs
+
+### **Assumptions**
+* **Single User:** The application is designed for a single user; authentication was not part of the assignment requirements.
+* **Specific Fields:** Each task includes only the fields specified in the brief: title, description, and status.
+* **Workflow:** Status values are limited to `Pending`, `In Progress`, and `Completed` to keep the workflow simple.
+* **Local Setup:** Assumes a local MongoDB development environment for easy evaluation.
+* **Purpose:** Intended for demonstration and assessment purposes rather than production use.
+
+### **Trade-offs**
+* **No Auth:** Focused on core CRUD functionality and architecture rather than implementing login/signup.
+* **Minimalist UI:** Prioritized clarity and usability over advanced styling or animations.
+* **Basic Validation:** Implemented core backend validation; robust libraries like Joi or Zod were omitted to reduce complexity for this scope.
+* **Deployment:** Configured for local use; cloud deployment or containerization was considered outside the project scope.
+* **No Pagination:** Advanced filtering and pagination were omitted due to the small expected dataset for this assignment.
 
 ---
 
@@ -101,9 +113,8 @@ cd task-management-app
 ---
 
 ## 🤖 AI Reflection
-To maintain transparency, here is how AI was utilized during development:
 * **Where AI Helped:** Assisted with boilerplate structure, Tailwind class suggestions, and README formatting.
-* **Human Logic:** I handled the core architectural decisions, API design, database schema relationships, and cross-origin integration.
+* **Human Logic:** Handled architectural decisions, API design, database schema relationships, and integration logic.
 
 ---
 
